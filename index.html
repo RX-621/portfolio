@@ -5,11 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>欧阳明哲 | 工业设计 × 模玩文化</title>
     <meta name="description" content="欧阳明哲 — 工业设计专业 2027 届。把玩家视角做成设计方法：动漫周边设计 / 玩具·模型设计方向作品集。" />
-    <script type="module" crossorigin src="https://cdn.jsdelivr.net/gh/RX-621/portfolio@gh-pages/assets/index-ClhDorgw.js"></script>
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/RX-621/portfolio@gh-pages/assets/index-CuqeAGhi.css">
   </head>
   <body>
     <div id="root"></div>
 
+    <script>
+    (function(){
+      var M=["https://cdn.jsdelivr.net/gh/RX-621/portfolio@gh-pages", "https://fastly.jsdelivr.net/gh/RX-621/portfolio@gh-pages", "https://gcore.jsdelivr.net/gh/RX-621/portfolio@gh-pages", "https://testingcf.jsdelivr.net/gh/RX-621/portfolio@gh-pages"];
+      window.__CDN=M[0];
+      var i=0;
+      function loadCss(n){
+        if(n>=M.length)return;
+        var c=document.createElement('link');c.rel='stylesheet';c.href=M[n]+'/assets/index-CuqeAGhi.css';
+        c.onerror=function(){loadCss(n+1)};document.head.appendChild(c);
+      }
+      function loadJs(){
+        if(i>=M.length){document.body.innerHTML='<div style="font-family:sans-serif;padding:3em;text-align:center"><h2>资源加载失败</h2><p>所有 CDN 镜像均无法访问，请检查网络连接（或尝试切换网络）后刷新重试。</p></div>';return;}
+        window.__CDN=M[i];
+        var s=document.createElement('script');s.type='module';s.crossOrigin='anonymous';
+        s.src=M[i]+'/assets/index-ClhDorgw.js';
+        s.onerror=function(){i++;loadJs()};
+        document.head.appendChild(s);
+      }
+      loadCss(0);loadJs();
+    })();
+    </script>
   </body>
 </html>
